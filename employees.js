@@ -196,7 +196,8 @@ function addDepartment() {
     function viewDepartments() {
         connection.query("SELECT * from department", function(err, res) {
             if (err) throw err;
-        console.log(res)
+        for (var i = 0; i < res.length; i++) {
+        console.log(res[i].name)};
         runProgram()
     })}; 
 
